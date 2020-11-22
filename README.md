@@ -1,2 +1,2 @@
-# Take Command Console
-.BTM files and other items for use with Take Command Console from JPSoft.com
+# ClsID.btm
+Given the ProgID, display the method and properties for said ProgID
