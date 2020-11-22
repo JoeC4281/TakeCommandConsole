@@ -9,4 +9,4 @@ On my system, I have the following function declared in my PowerShell Profile;
  	new-object -com $progID
  }</code>
 
-I call the CreateObject function from the <b>ClsID.BTM</b> code.
+I call the <code>CreateObject</code> function from the <b>ClsID.BTM</b> code.
