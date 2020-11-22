@@ -7,6 +7,6 @@ On my system, I have the following function declared in my PowerShell Profile;
 <code>function CreateObject($progID)
  {
  	new-object -com $progID
- }<code>
+ }</code>
 
-I call the CreateObject function from the ClsID.BTM code.
+I call the CreateObject function from the <b>ClsID.BTM</b> code.
