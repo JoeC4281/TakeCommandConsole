@@ -8,9 +8,20 @@ endiff
 set ClsID=%@regquery[HKEY_CLASSES_ROOT\%1\clsid\]
 echo %ClsID
 iff %@regexist[HKey_Classes_Root\Wow6432Node\AppID\%ClsID\] eq 1 then
+  ::
+  :: I want to be able to run my 32-bit COM DLL from 64-bit TCC/PowerShell.
+  :: Thus, I have to make sure that the 32-bit COM DLL is launched via
+  ::   a DLL Surrogate from 64-bit TCC/PowerShell.
+  ::
   reg add HKey_Classes_Root\Wow6432Node\AppID\%ClsID /v DllSurrogate /f
   reg query HKey_Classes_Root\Wow6432Node\AppID\%ClsID /v DllSurrogate
+  ::
+  :: Now, see if I can create an Object from the 32-bit COM DLL from
+  ::   64-bit TCC/PowerShell.
   pshell /s "$jlc = CreateObject('%1')"
+  ::
+  :: Next, show the members of the COM Object that I can use.
+  ::
   pshell /s "$jlc | get-member"
 else
   echo HKey_Classes_Root\Wow6432Node\AppID\%ClsID\ does not exist.
