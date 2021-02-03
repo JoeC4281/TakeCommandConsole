@@ -42,7 +42,7 @@ PS E:\utils> $dx.GetCommandLine()
 Powershell.exe
 PS E:\utils>
 ```
-It will also work with TCC v27 PSHELL;
+It will also work with TCC PSHELL;
 
 Code:
 ```dos
