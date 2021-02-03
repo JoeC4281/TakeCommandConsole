@@ -85,8 +85,10 @@ e:\utils>script test.js
 ```
 Detailed info about DynamicWrapperX can be found at the following websites;
 
-Link to DynamicWrapperX (Version 2)
-Ref: [DynamicWrapperX Home Page](https://dynwrapx.script-coding.com/dwx/pages/dynwrapx.php?lang=en)
+Link to DynamicWrapperX (Version 2)<br>
+Ref: [DynamicWrapperX HomePage](https://dynwrapx.script-coding.com/dwx/pages/dynwrapx.php?lang=en)
 
-Link to DynamicWrapperX (Version 1)
+Link to DynamicWrapperX (Version 1)<br>
 Ref: [DynamicWrapperX Help](https://www.script-coding.com/dynwrapx_eng.html)
+
+Original Forum Post: [SCRIPT and DynamicWrapperX](https://jpsoft.com/forums/threads/script-and-dynamicwrapperx.10722/)
