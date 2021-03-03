@@ -9,6 +9,7 @@ From the **Implementation** tab, I check the **Use Surrogate Process**;
 ![](DLL1.png)
 
 From the Registry tab, I ensure that the **AppID** has a **DllSurrogate** entry;
+
 ![](DLL2.png)
 
 Now, from 64-bit TCC, I can do;
