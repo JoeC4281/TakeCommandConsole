@@ -3,7 +3,7 @@
 I have found a method to use the 32-bit In-Process COM Server DLLs that I have created using Visual Basic 6.0 and Visual FoxPro 9.0 from 64-bit TCC via PSHELL.
 
 Using the Microsoft OLE/COM Object Viewer, I expand the **All Objects** tree, and locate the target 32-bit In-Process COM Server DLL, in my example, **jlcutils.clsMath**
-
+Ref:
 From the **Implementation** tab, I check the **Use Surrogate Process**;
 
 ![](DLL1.png)
@@ -33,3 +33,5 @@ PSHELL: System.Management.Automation.CmdletInvocationException : Retrieving the 
 0x80040154 (REGDB_E_CLASSNOTREG)).
 ```
 This method does not work for 32-bit Out-Of-Process COM Server EXEs, but I am hoping that this can be made possible in the next version of TCC.
+
+Ref: [Using a 32-bit In-Process COM Server DLL from 64-bit TCC](https://jpsoft.com/forums/threads/using-a-32-bit-in-process-com-server-dll-from-64-bit-tcc.9646/)
