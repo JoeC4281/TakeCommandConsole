@@ -3,7 +3,7 @@
 I have found a method to use the 32-bit In-Process COM Server DLLs that I have created using Visual Basic 6.0 and Visual FoxPro 9.0 from 64-bit TCC via PSHELL.
 
 Using the Microsoft OLE/COM Object Viewer, I expand the **All Objects** tree, and locate the target 32-bit In-Process COM Server DLL, in my example, **jlcutils.clsMath**
-Ref:
+
 From the **Implementation** tab, I check the **Use Surrogate Process**;
 
 ![](DLL1.png)
