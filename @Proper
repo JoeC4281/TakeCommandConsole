@@ -1,3 +1,0 @@
-This is a function that will convert a non-proper case string to proper case.
-
-proper=%@pshell[(Get-Culture).TextInfo.ToTitleCase("%$".ToLower())]
