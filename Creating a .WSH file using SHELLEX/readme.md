@@ -1,4 +1,4 @@
-SHELLEX is a command from the SYSUTILS plugin, available from;
+PROPS is a command from the SYSUTILS plugin, available from;
 
 [Take Command Plugins for TCC and TCC/LE Command Prompts](https://jpsoft.com/all-downloads/plugins-take-command.html)
 
@@ -7,30 +7,29 @@ I am using the 64-bit version of SYSUTILS, as I am using the 64-bit version of T
 From the SYSUTILS.TXT file;
 
 ```dos
-SHELLEX
+PROPS
 
-ShellExecute with registered or context menu verb
-
-SHELLEX [/C] [/V verb] <file> [<arguments> [<directory>]]
-
-  /C          use context menu
-
-  /V verb     "print", "edit", "explore" et c.
-              (with /C) "properties", "preview", et c.  Without "/V verb",
-              the default verb is used if available, else "open" is used.
-
-  /D          (debug) show parameter parsing without executing
-
-  <arguments> and <directory> apply to launching executables
-
-  When appropriate, <file> may specify a URL, a directory or a drive
-  
-  Quote parameters containing whitespace; escape necessary quotes as \"
+PROPS object ... open the objects properties dialog
 ```
-Here is how to create, from TCC, a .WSH file using SHELLEX; 
+Here is how to create, from TCC, a .WSH file using PROPS;
+
+```dos
+PROPS test.vbs
+```
 
 From the context menu, Script tab;
 
 ![image](https://user-images.githubusercontent.com/58880711/137628293-84906bfd-7345-4f28-8cb9-907ff07b6f4c.png)
+
+I can make the changes that I want, click Apply (or OK), and the test.wsh file is created for me, thus; 
+
+```dos
+e:\utils>type test.wsh
+[ScriptFile]
+Path=E:\Utils\test.vbs
+[Options]
+Timeout=1
+DisplayLogo=0
+```
 
 Ref: https://jpsoft.com/forums/threads/creating-a-wsh-file-using-shellex.10420/#post-58664
