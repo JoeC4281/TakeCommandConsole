@@ -1,0 +1,5 @@
+[ScriptFile]
+Path=e:\Documents\GitHub\TakeCommandConsole\Creating a .WSH file using SHELLEX\test.vbs
+[Options]
+Timeout=1
+DisplayLogo=0
