@@ -30,6 +30,7 @@ SHELLEX [/C] [/V verb] <file> [<arguments> [<directory>]]
 Here is how to create, from TCC, a .WSH file using SHELLEX; 
 
 From the context menu, Script tab;
+
 ![image](https://user-images.githubusercontent.com/58880711/137628293-84906bfd-7345-4f28-8cb9-907ff07b6f4c.png)
 
 Ref: https://jpsoft.com/forums/threads/creating-a-wsh-file-using-shellex.10420/#post-58664
