@@ -90,3 +90,9 @@ echo %_syserr
 quit
 Return
 ```
+
+### POKEing an 'A' into a Memory Mapped File
+```dos
+:: A is ASCII code 65
+echo %@smpoke[%mmf1,0,1,65] > nul
+```
