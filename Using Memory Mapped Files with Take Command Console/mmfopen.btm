@@ -1,5 +1,14 @@
 @setlocal
 @echo off
+
+COMMENT
+     _x64: 1
+   _admin: 1
+_elevated: 1
+
+TCC  30.00.18 x64   Windows 10 [Version 10.0.19044.2965]
+ENDCOMMENT
+
 ::
 :: Determine if a handle to shared memory is open
 ::
