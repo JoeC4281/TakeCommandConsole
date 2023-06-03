@@ -21,6 +21,30 @@ Example:
 handle mmf -nobanner -p tcc
 ```
 
+### Example Usage
+```dos
+mmfwrite.btm %_isodate
+
+mmfread.btm
+2023-06-03
+```
+
+```dos
+R:\>type test.txt
+06:36:38
+
+R:\>mmfwrite.btm < R:\Test.txt
+
+R:\>mmfread
+06:36:38
+```
+
+```dos
+R:\>echo %_time |! mmfwrite.btm
+
+R:\>mmfread
+07:49:41
+```
 ## Scripts
 
 ### <u>MMFOpen.btm</u>
@@ -56,23 +80,51 @@ else
   quit
 endiff
 
+:: 0 = Re-direct
+:: 1 = Console
+::
+:: mmfwrite.btm < r:\test.txt
+:: echo %_time |! mmfwrite.btm
+
 iff %# eq 0 then
-  echo USAGE: %_batchname Text to store in MMF
-  quit
+  iff %_stdin eq 1 then
+    echo USAGE: %_batchname Text to store in MMF
+    quit
+  endiff
 endiff
+
+Gosub ClearMMF
 on error goto errTrap
-:: echo %@smwrite[%mmf1,0,a,%$]
-iff %@smwrite[%mmf1,0,a,%$] ne 0 then
-  echo Error writing to MMF
+iff %_stdin eq 1 then
+  iff %@smwrite[%mmf1,0,a,%$] ne 0 then
+    echo Error writing to MMF
+  endiff
+else
+  do line in @con:
+    iff %@smwrite[%mmf1,0,a,%line] ne 0 then
+      echo Error writing to MMF
+    endiff
+  enddo
 endiff
 endlocal
 quit
 
 :errTrap
 ::  6 The handle is invalid.
-if %_syserr eq 6 echo %@errtext[6]
+iff %_syserr eq 6 then
+  echo %@errtext[6]
+else
+  echo %@errtext[%_syserr]
 endiff
 quit
+Return
+
+:ClearMMF
+set MMF1Len=%@len[%{mmfread.btm}]
+set MMF1Len=%@dec[%MMF1Len]
+do kount=0 to %MMF1Len
+  echo %@smpoke[%mmf1,%kount,4,0] > nul
+enddo
 Return
 ```
 ### <u>MMFRead.btm</u>
