@@ -81,10 +81,13 @@ else
 endiff
 
 :: 0 = Re-direct
-:: 1 = Console
 ::
 :: mmfwrite.btm < r:\test.txt
 :: echo %_time |! mmfwrite.btm
+::
+:: 1 = Console
+::
+:: mmfwrite.btm This is a test.
 
 iff %# eq 0 then
   iff %_stdin eq 1 then
