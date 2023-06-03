@@ -1,0 +1,12 @@
+@setlocal
+@echo off
+on error goto errTrap
+echo %@smread[%mmf1,0,a,10240]
+endlocal
+quit
+
+:errTrap
+echo %_syserr
+:: 87 The parameter is incorrect.
+quit
+Return

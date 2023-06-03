@@ -20,9 +20,11 @@ Example:
 ```dos
 handle mmf -nobanner -p tcc
 ```
-
-### Example Usage
+https://learn.microsoft.com/en-us/sysinternals/downloads/handle
+### <u>Example Usage of mmfwrite.btm and mmfread.btm</u>
 ```dos
+mmfopen.btm mmf1
+
 mmfwrite.btm %_isodate
 
 mmfread.btm
@@ -47,7 +49,7 @@ R:\>mmfread
 ```
 ## Scripts
 
-### <u>MMFOpen.btm</u>
+### <u>[MMFOpen.btm][1]</u>
 
 ```dos
 @setlocal
@@ -151,3 +153,5 @@ Return
 :: A is ASCII code 65
 echo %@smpoke[%mmf1,0,1,65] > nul
 ```
+
+  [1]: mmfopen.btm

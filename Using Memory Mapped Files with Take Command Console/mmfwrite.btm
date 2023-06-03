@@ -1,0 +1,58 @@
+@setlocal
+@echo off
+iff defined mmf1 then
+  :: echo mmf1 Exists
+else
+  echo mmf1 does not exist
+  quit
+endiff
+
+:: 0 = Re-direct
+::
+:: mmfwrite.btm < r:\test.txt
+:: echo %_time |! mmfwrite.btm
+::
+:: 1 = Console
+::
+:: mmfwrite.btm This is a test.
+
+iff %# eq 0 then
+  iff %_stdin eq 1 then
+    echo USAGE: %_batchname Text to store in MMF
+    quit
+  endiff
+endiff
+
+Gosub ClearMMF
+on error goto errTrap
+iff %_stdin eq 1 then
+  iff %@smwrite[%mmf1,0,a,%$] ne 0 then
+    echo Error writing to MMF
+  endiff
+else
+  do line in @con:
+    iff %@smwrite[%mmf1,0,a,%line] ne 0 then
+      echo Error writing to MMF
+    endiff
+  enddo
+endiff
+endlocal
+quit
+
+:errTrap
+::  6 The handle is invalid.
+iff %_syserr eq 6 then
+  echo %@errtext[6]
+else
+  echo %@errtext[%_syserr]
+endiff
+quit
+Return
+
+:ClearMMF
+set MMF1Len=%@len[%{mmfread.btm}]
+set MMF1Len=%@dec[%MMF1Len]
+do kount=0 to %MMF1Len
+  echo %@smpoke[%mmf1,%kount,4,0] > nul
+enddo
+Return

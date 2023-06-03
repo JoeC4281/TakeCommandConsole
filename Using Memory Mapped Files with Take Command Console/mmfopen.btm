@@ -1,0 +1,17 @@
+@setlocal
+@echo off
+::
+:: Determine if a handle to shared memory is open
+::
+iff defined mmf1 then
+  set mmf*
+  echo MMF1 is already open
+  ::
+  :: handle.exe is from https://learn.microsoft.com/en-us/sysinternals/downloads/handle
+  ::
+  handle.exe mmf1 -nobanner
+  quit
+endiff
+set mmf1=%@smopen[10240,MMF1]
+set mmf*
+endlocal mmf1
