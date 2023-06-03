@@ -71,7 +71,7 @@ set mmf*
 endlocal mmf1
 ```
 
-### <u>MMFWrite.btm</u>
+### <u>[MMFWrite.btm][2]</u>
 ```dos
 @setlocal
 @echo off
@@ -132,7 +132,7 @@ do kount=0 to %MMF1Len
 enddo
 Return
 ```
-### <u>MMFRead.btm</u>
+### <u>[MMFRead.btm][3]</u>
 ```dos
 @setlocal
 @echo off
@@ -155,3 +155,5 @@ echo %@smpoke[%mmf1,0,1,65] > nul
 ```
 
   [1]: mmfopen.btm
+  [2]: mmfwrite.btm
+  [3]: mmfread.btm
