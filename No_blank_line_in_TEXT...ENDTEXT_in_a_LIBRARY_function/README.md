@@ -29,8 +29,7 @@ Rex Conn says;
 
 > TCC strips all leading & trailing whitespace from the line.<br>
 If the line is (then) empty,<br>
-TCC doesn't save it in memory.
-
+TCC doesn't save it in memory.<br>
 If you want to display blank lines, use escape sequences.
 
 From Notepad++,<br>
