@@ -1,4 +1,4 @@
-Get Rid Of Blank Lines
+# Get Rid Of Blank Lines
 
 `wmiquery /a . "select name from Win32_service where ProcessId=1032" | tpipe /simple=10`
 
