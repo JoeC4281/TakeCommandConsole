@@ -1,20 +1,21 @@
 # AllInOne.btm demonstrates having JScript, VBScript, TCC code in one .BTM file
 
-Windows Scripting Host seems to only care about the package section of a file, and ignores everything else.
+Windows Scripting Host seems to only care about the package section of a file,<br>
+and ignores everything else.
 
 This .BTM can also be used as an .INI file.
 
-Thus, the first part of this .BTM is TCC code,
-the second part is VBScript/JScript code,
+Thus, the first part of this .BTM is TCC code,<br>
+the second part is VBScript/JScript code,<br>
 and the third part is an .INI file.
 
 I'm posting this mainly for my future reference,
 but others may be interested also.
 
-I tried to post the code for the .BTM in the forum,
+I tried to post the code for the .BTM in the forum,<br>
 but it would not allow me to post it, saying that I had been blocked.
 
-As the .BTM also contains WSF code (XML code),
+As the .BTM also contains WSF code (XML code),<br>
 I'm thinking that is why I was not allowed to post it.
 
 ```dos
