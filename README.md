@@ -1,6 +1,6 @@
 # Take Command Console
 
-.BTM and other items for use with Take Command Console from JPSoft.com
+Tips and Tricks for use with Take Command Console from JPSoft.com
 
 - [Avoid Continued Lines](<Avoid_Continued_Lines>)
 - [ClsID](<ClsID>)
